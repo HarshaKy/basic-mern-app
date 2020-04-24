@@ -18,7 +18,7 @@ app.post('/users', (req, res) => {
     var user = new User({
         name: req.body.name,
         email: req.body.email,
-        address: req.body.address
+        addresses: req.body.addresses
     })
 
     user.save().then((doc) => {

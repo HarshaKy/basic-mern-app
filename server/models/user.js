@@ -21,11 +21,25 @@ var UserSchema = new mongoose.Schema({
         }
     },
 
-    address: {
-        type: String,
-        required: true,
-        trim: true,
-        minlength: 1
+    addresses: {
+        hometown: {
+            type: String,
+            required: true,
+            trim: true,
+            minlength: 1
+        },
+        current: {
+            type: String,
+            required: true,
+            trim: true,
+            minlength: 1
+        },
+        work: {
+            type: String,
+            required: true,
+            trim: true,
+            minlength: 1
+        }
     }
 })
 
