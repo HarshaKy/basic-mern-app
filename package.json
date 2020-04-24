@@ -1,0 +1,25 @@
+{
+  "name": "basic-mern-app",
+  "version": "1.0.0",
+  "description": "Simple Web Application built using MERN stack to create and fetch users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshaKy/basic-mern-app.git"
+  },
+  "author": "Harsha KY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarshaKy/basic-mern-app/issues"
+  },
+  "homepage": "https://github.com/HarshaKy/basic-mern-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.10",
+    "validator": "^13.0.0"
+  }
+}
