@@ -1,3 +1,5 @@
+// import libs required
+
 const express = require('express')
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb')
@@ -5,15 +7,19 @@ const {ObjectID} = require('mongodb')
 var {User} = require('./models/user')
 var {mongoose} = require('./db/mongoose')
 
+// initialize express and set port number
 var app = express()
 const port = 3000
 
+// telling the app to use bodyparser.json method
 app.use(bodyParser.json())
 
+// the "front page" of the app
 app.get('', (req, res) => {
     res.send('hello world')
 })
 
+// route to create user
 app.post('/users', (req, res) => {
     var user = new User({
         name: req.body.name,
@@ -28,6 +34,7 @@ app.post('/users', (req, res) => {
     })
 })
 
+// route to fetch all users
 app.get('/users', (req, res) => {
     User.find().then((users) => {
         res.send({users})
@@ -36,6 +43,7 @@ app.get('/users', (req, res) => {
     })
 })
 
+// search user by id
 app.get('/users/id/:id', (req, res) => {
     var id = req.params.id
 
@@ -51,6 +59,7 @@ app.get('/users/id/:id', (req, res) => {
     }).catch((e) => console.log('Invalid ID'))
 })
 
+// search user by name
 app.get('/users/name/:name', (req, res) => {
     var name = req.params.name
 
@@ -62,6 +71,7 @@ app.get('/users/name/:name', (req, res) => {
     }).catch((e) => console.log('Invalid ID'))
 })
 
+// search user by address
 app.get('/users/address/:address', (req, res) => {
     var address = req.params.address
 

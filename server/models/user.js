@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
-const validator = require('validator')
+const validator = require('validator') // lets us validate things like emailID
 
+// create schema for User with necessary fields
 var UserSchema = new mongoose.Schema({
     name: {
         type: String,
