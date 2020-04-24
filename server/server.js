@@ -75,13 +75,7 @@ app.get('/users/name/:name', (req, res) => {
 app.get('/users/address/:address', (req, res) => {
     var address = req.params.address
 
-    var search = {
-        addresses: {
-            hometown: address
-        }
-    }
-
-    User.find({search}).then((user) => {
+    User.find({ "addresses.current": address }).then((user) => {
         res.send({user})
     })
 })
