@@ -76,7 +76,7 @@ app.get('/users/address/:address', (req, res) => {
     var address = req.params.address
 
     User.find({ "addresses.current": address }).then((user) => {
-        res.send({user})
+        res.send(user)
     })
 })
 
