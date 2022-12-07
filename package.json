@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/HarshaKy/basic-mern-app#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.10",
     "nodemon": "^2.0.3",
